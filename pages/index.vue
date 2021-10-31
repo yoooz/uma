@@ -10,21 +10,21 @@
             馬
           </v-col>
         </v-row>
+        <div
+          style="
+            background-color: white;
+            position: absolute;
+            height: 92%;
+            width: 5px;
+            top: 10px;
+            right: 200px;
+          "
+        ></div>
       </v-col>
     </v-row>
     <v-row justify="center" align="center">
       <v-btn @click="run">START!!</v-btn>
     </v-row>
-    <div
-      style="
-        background-color: white;
-        position: absolute;
-        height: 80vh;
-        width: 5px;
-        top: 10px;
-        right: 200px;
-      "
-    ></div>
   </v-container>
 </template>
 
