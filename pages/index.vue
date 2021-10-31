@@ -3,12 +3,20 @@
     <v-row>
       <v-col>
         <v-row v-for="uma in umas" :key="uma.name">
-          <v-col style="flex-grow: 0.2"> {{ uma.rank }} </v-col>
+          <v-col style="flex-grow: 0.13; text-align: right">
+            {{ uma.rank }}
+          </v-col>
           <v-col style="flex-grow: 1"> {{ uma.name }} </v-col>
           <v-col style="flex-grow: 5; display: flex">
             <div v-bind:style="{ width: uma.ran + '%' }"></div>
-            馬
+            <v-img
+              :src="require('@/assets/img/uma.png')"
+              max-width="20"
+              max-height="20"
+            >
+            </v-img>
           </v-col>
+          <div style="background-color: white; height: 1px; width: 100%"></div>
         </v-row>
         <div
           style="
@@ -17,13 +25,10 @@
             height: 92%;
             width: 5px;
             top: 10px;
-            right: 200px;
+            right: 150px;
           "
         ></div>
       </v-col>
-    </v-row>
-    <v-row justify="center" align="center">
-      <v-btn @click="run">START!!</v-btn>
     </v-row>
   </v-container>
 </template>
@@ -45,9 +50,6 @@ export default {
     }, 100)
   },
   methods: {
-    start() {
-      // this.isRunning = true
-    },
     run() {
       const notGoald = this.umas.filter((uma) => uma.rank === ' ')
       const dash = Math.floor(Math.random() * notGoald.length)
@@ -56,6 +58,10 @@ export default {
       const targetUmaIndex = this.umas.findIndex(
         (uma) => uma.name === targetUmaName
       )
+
+      if (targetUmaIndex < 0) {
+        return
+      }
 
       const ran = this.umas[targetUmaIndex].ran + SPEED
 
