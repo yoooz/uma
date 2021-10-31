@@ -39,16 +39,14 @@ export default {
       umas,
     }
   },
+  created() {
+    setInterval(() => {
+      this.run()
+    }, 100)
+  },
   methods: {
     start() {
-      console.dir(this.umas.filter((element) => element.ran < GOAL_LINE))
-      while (
-        this.umas.filter((element) => element.ran < GOAL_LINE).length > 0
-      ) {
-        console.log('run')
-        this.run()
-        // setTimeout(this.run, 1000)
-      }
+      // this.isRunning = true
     },
     run() {
       const dash = Math.floor(Math.random() * this.umas.length)
