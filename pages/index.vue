@@ -1,14 +1,21 @@
 <template>
   <v-container>
-    <v-row class="rane" justify="center">
-      <v-col v-for="uma in umas" :key="uma.name" class="flex">
-        <div v-bind:style="{ height: uma.ran + '%' }"></div>
-        {{ uma.name }}
-      </v-col>
-    </v-row>
     <v-row>
-      <v-col v-for="uma in umas" :key="uma.name">
-        {{ uma.rank }}
+      <v-col style="width: 10vw; flex-grow: 0">
+        <v-row v-for="uma in umas" :key="uma.name">
+          {{ uma.rank }}
+        </v-row>
+      </v-col>
+      <v-col style="width: 30vw; flex-grow: 1">
+        <v-row v-for="uma in umas" :key="uma.name">
+          {{ uma.name }}
+        </v-row>
+      </v-col>
+      <v-col style="flex-grow: 5">
+        <v-row v-for="uma in umas" :key="uma.name">
+          <div v-bind:style="{ width: uma.ran + '%' }"></div>
+          馬
+        </v-row>
       </v-col>
     </v-row>
     <v-row justify="center" align="center">
