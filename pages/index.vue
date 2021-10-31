@@ -1,34 +1,38 @@
 <template>
   <v-container>
     <v-row>
-      <v-col style="width: 10vw; flex-grow: 0">
+      <v-col>
         <v-row v-for="uma in umas" :key="uma.name">
-          {{ uma.rank }}
-        </v-row>
-      </v-col>
-      <v-col style="width: 30vw; flex-grow: 1">
-        <v-row v-for="uma in umas" :key="uma.name">
-          {{ uma.name }}
-        </v-row>
-      </v-col>
-      <v-col style="flex-grow: 5">
-        <v-row v-for="uma in umas" :key="uma.name">
-          <div v-bind:style="{ width: uma.ran + '%' }"></div>
-          馬
+          <v-col style="flex-grow: 0.2"> {{ uma.rank }} </v-col>
+          <v-col style="flex-grow: 1"> {{ uma.name }} </v-col>
+          <v-col style="flex-grow: 5; display: flex">
+            <div v-bind:style="{ width: uma.ran + '%' }"></div>
+            馬
+          </v-col>
         </v-row>
       </v-col>
     </v-row>
     <v-row justify="center" align="center">
       <v-btn @click="run">START!!</v-btn>
     </v-row>
+    <div
+      style="
+        background-color: white;
+        position: absolute;
+        height: 80vh;
+        width: 5px;
+        top: 10px;
+        right: 200px;
+      "
+    ></div>
   </v-container>
 </template>
 
 <script>
 import umas from '../assets/json/umas.json'
 
-const GOAL_LINE = 80
-const SPEED = 10
+const GOAL_LINE = 99
+const SPEED = 40
 export default {
   data() {
     return {
@@ -53,18 +57,17 @@ export default {
       this.umas[dash].ran = ran > GOAL_LINE ? GOAL_LINE : ran
 
       const finishIndex = this.umas.findIndex(
-        (uma) => uma.ran >= GOAL_LINE && uma.rank === ''
+        (uma) => uma.ran >= GOAL_LINE && uma.rank === ' '
       )
-      console.log(finishIndex)
 
       if (finishIndex < 0) {
         return
       }
 
       const goald = this.umas.filter(
-        (uma) => uma.ran >= GOAL_LINE && uma.rank !== ''
+        (uma) => uma.ran >= GOAL_LINE && uma.rank !== ' '
       )
-      this.umas[finishIndex].rank = `${goald.length + 1}`
+      this.umas[finishIndex].rank = `${goald.length + 1}着`
     },
   },
 }
