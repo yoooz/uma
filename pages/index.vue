@@ -53,6 +53,10 @@ export default {
   methods: {
     run() {
       const notGoald = this.umas.filter((uma) => uma.rank === ' ')
+      if (notGoald.length === 0) {
+        return
+      }
+
       const dash = Math.floor(Math.random() * notGoald.length)
       const targetUmaName = notGoald[dash].name
 
