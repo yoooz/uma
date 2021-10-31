@@ -1,5 +1,7 @@
 # uma
 
+![sample](assets/img/sample.gif)
+
 ## Build Setup
 
 ```bash
