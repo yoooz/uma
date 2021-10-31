@@ -9,6 +9,7 @@
           <v-col style="flex-grow: 1"> {{ uma.name }} </v-col>
           <v-col style="flex-grow: 5; display: flex">
             <div v-bind:style="{ width: uma.ran + '%' }"></div>
+            {{ uma.index }}
             <v-img
               :src="require('@/assets/img/uma.png')"
               max-width="20"

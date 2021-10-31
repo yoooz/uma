@@ -2,81 +2,97 @@
     {
         "name": "コントレイル",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 1
     },
     {
         "name": "カデナ",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 2
     },
     {
         "name": "モズベッロ",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 3
     },
     {
         "name": "ポタジェ",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 4
     },
     {
         "name": "エフフォーリア",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 5
     },
     {
         "name": "トーセンスーリヤ",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 6
     },
     {
         "name": "ワールドプレミア",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 7
     },
     {
         "name": "サンレイポケット",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 8
     },
     {
         "name": "グランアレグリア",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 9
     },
     {
         "name": "カイザーミノル",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 10
     },
     {
         "name": "ムイトオブリガード",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 11
     },
     {
         "name": "ラストドラフト",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 12
     },
     {
         "name": "ペルシアンナイト",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 13
     },
     {
         "name": "カレンブーケドール",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 14
     },
     {
         "name": "キシイグアス",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 15
     },
     {
         "name": "ユーキャンスマイル",
         "ran": 0,
-        "rank": " "
+        "rank": " ",
+        "index": 16
     }
 ]
