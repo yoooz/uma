@@ -32,7 +32,7 @@
 import umas from '../assets/json/umas.json'
 
 const GOAL_LINE = 99
-const SPEED = 40
+const SPEED = 10
 export default {
   data() {
     return {
@@ -49,10 +49,17 @@ export default {
       // this.isRunning = true
     },
     run() {
-      const dash = Math.floor(Math.random() * this.umas.length)
+      const notGoald = this.umas.filter((uma) => uma.rank === ' ')
+      const dash = Math.floor(Math.random() * notGoald.length)
+      const targetUmaName = notGoald[dash].name
 
-      const ran = this.umas[dash].ran + SPEED
-      this.umas[dash].ran = ran > GOAL_LINE ? GOAL_LINE : ran
+      const targetUmaIndex = this.umas.findIndex(
+        (uma) => uma.name === targetUmaName
+      )
+
+      const ran = this.umas[targetUmaIndex].ran + SPEED
+
+      this.umas[targetUmaIndex].ran = ran > GOAL_LINE ? GOAL_LINE : ran
 
       const finishIndex = this.umas.findIndex(
         (uma) => uma.ran >= GOAL_LINE && uma.rank === ' '
